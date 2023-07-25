@@ -1,11 +1,11 @@
 /* global */
 :root {
 /* App colors */
-    --color-primary: var(--color-black);
-    --color-primary-variant: var(--color-gray)
-    --color-accent: var(--color-blue);
-    --color-accent-variant: var(--color-orange);
-    --color-text: var(--color-white);
+--color-primary: var(--color-black);
+--color-primary-variant: var(--color-gray)
+--color-accent: var(--color-blue);
+--color-accent-variant: var(--color-orange);
+--color-text: var(--color-white);
 
 /* Colors */
 
@@ -24,6 +24,7 @@
 }
 body{
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 h1, 
 h2,
@@ -40,11 +41,50 @@ a{
     text-decoration: none ;
     color: var(--color-text);
 }
-button {
+button{
+  
     background-color: transparent;
     outline: 0;
     border: 0;
 }
-button:focus {
-    outline: 1px solid var(--color-accent);
+button:focus{
+    outline: 1px solid var(--color-blue);
+}
+
+/* Header */
+.header {
+    background-color: #050a13;
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.header_logo_img{
+    width: 36px;
+    height: 36px;
+}
+.header_logo_title{
+    font-size: 1.8rem;
+}
+.header_menu{
+    display: flex;
+    gap: 4px;
+}
+.header_menu_item{
+    padding: 8px 16px;
+}
+.header_menu_item:hover{
+    border-bottom: 1px solid var(--color-blue);
+}
+.header_menu_item.active{
+    border: 1px solid var(--color-blue);
+    border-radius: 4px;
 }
