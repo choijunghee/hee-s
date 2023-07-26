@@ -339,3 +339,32 @@ text-align: center;
     height: 2px;
     background-color: var(--color-blue);
 }
+/* recommend */
+.recommends{
+    margin: 2rem;
+}
+.recommend{
+    
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.recommend:nth-child(even) .recommend_img{
+    order: 1;
+}
+.recommend_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.recommend_bubble{
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.recommend_bubble_name{
+    color: var(--color-blue);
+    font-weight: bold;
+    filter: brightness(70%);
+}
