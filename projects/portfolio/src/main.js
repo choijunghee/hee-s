@@ -1,3 +1,5 @@
+'use strict';
+
 // header에 페이지 아래로 스크롤시 다크 스타일링 적용
 const header=document.querySelector('.header');
 const headerHeight = header.getBoundingClientRect().height;
@@ -24,4 +26,16 @@ document.addEventListener('scroll', () =>{
     } else{
         arrowUp.style.opacity=0;
     }
+});
+
+// NavBar 토글버튼 클릭 처리
+const navbarMenu= document.querySelector('.header_menu');
+const navbarToggle = document.querySelector('.header_toggle');
+navbarToggle.addEventListener('click', ()=> {
+    navbarMenu.classList.toggle('open');
+});
+ 
+// Navbar 메뉴 클릭시 메뉴를 자동으로 닫아줌
+navbarMenu.addEventListener('click', ()=> {
+    navbarMenu.classList.remove('open');
 });
